@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pink - фотографии пользователей</title>
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="fonts/opensansregular.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* Mobile layout by default */
+        background-image: url( "preview/pink-photo-mobile.jpg" );
+      }
+      /* Tablet */
+      @media ( min-width: 660px ) {
+        HTML {
+          /* Tablet layout */
+          background-image: url( "preview/pink-photo-tablet.jpg" );
+        }
+      }
+      /* Desktop */
+      @media ( min-width: 960px ) {
+        HTML {
+          /* Desktop layout */
+          background-image: url( "preview/pink-photo-desktop.jpg" );
+        }
+      }
+    </style>
+    <link href="preview/styles.css" rel="stylesheet">
+    <script src="preview/script.js"></script>
+    <!-- // Pixel Glass -->
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__inner container">
+        <nav class="main-navigation page-header__navigation">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="index.html">
+                <picture class="main-navigation__image">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/147x40">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/147x40">
+                  <img src="http://placehold.it/75x22" alt="Логотип приложения Pink">
+                </picture>
+                <span class="visually-hidden">Логотип приложения Pink</span>
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link">Фотографии</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+          <button class="main-navigation__toggle">
+            <span class="visually-hidden">Открыть/закрыть меню</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <header class="page-main__wrapper">
+        <h1 class="page-main__title">Фотографии пользователей</h1>
+      </header>
+      <section class="gallery">
+        <h2 class="visually-hidden">Галерея фотографий</h2>
+        <p class="gallery__text-top">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <section class="best-photo">
+          <div class="best-photo__wrapper">
+            <h3 class="best-photo__title">Панорама дня</h3>
+          </div>
+          <a class="best-photo__link" href="http://placehold.it/320x130">
+            <picture class="best-photo__image">
+              <source media="(min-width: 960px)" srcset="http://placehold.it/320x130 1x, http://placehold.it/320x130 2x" type="image/webp">
+              <source media="(min-width: 960px)" srcset="http://placehold.it/320x130 1x, http://placehold.it/320x130 2x">
+              <source media="(min-width: 660px)" srcset="http://placehold.it/320x130 1x, http://placehold.it/320x130 2x" type="image/webp">
+              <source media="(min-width: 660px)" srcset="http://placehold.it/320x130 1x, http://placehold.it/320x130 2x">
+              <source srcset="http://placehold.it/320x130 1x, http://placehold.it/320x130 2x" type="image/webp">
+              <source srcset="http://placehold.it/320x130 2x">
+              <img src="http://placehold.it/320x130" alt="На фотографии изображен вид с высокого моста на зеленый лес и густые тучи">
+            </picture>
+          </a>
+          <div class="best-photo__inner container">
+            <p class="best-photo__author">
+              Анна
+              <span class="best-photo__time">(5 минут назад)</span>
+            </p>
+            <p class="best-photo__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <p class="best-photo__like">Нравится: 215</p>
+          </div>
+        </section>
+        <div class="gallery__inner container">
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <a class="gallery__link" href="http://placehold.it/280x180">
+                <picture class="gallery__image">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source srcset="http://placehold.it/320x130 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source srcset="http://placehold.it/320x130 2x">
+                  <img src="http://placehold.it/280x180" alt="На фотографии изображен фотоаппарат на треноге, направленный на автомобиль белого цвета">
+                </picture>
+              </a>
+              <div class="gallery__wrapper">
+                <p class="gallery__author">
+                  Левон
+                  <span class="gallery__time">(5 часов назад)</span>
+                </p>
+                <p class="gallery__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <p class="gallery__like">Нравится: 356</p>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="http://placehold.it/280x180">
+                <picture class="gallery__image">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source srcset="http://placehold.it/320x130 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source srcset="http://placehold.it/320x130 2x">
+                  <img src="http://placehold.it/280x180" alt="На фотографии изображены барабаны">
+                </picture>
+              </a>
+              <div class="gallery__wrapper">
+                <p class="gallery__author">
+                  Антон
+                  <span class="gallery__time">(12 часов назад)</span>
+                </p>
+                <p class="gallery__text">Соседи будут рады!</p>
+                <p class="gallery__like">Нравится: 666</p>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="http://placehold.it/280x180">
+                <picture class="gallery__image">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source srcset="http://placehold.it/320x130 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source srcset="http://placehold.it/320x130 2x">
+                  <img src="http://placehold.it/280x180" alt="На фотографии изображен вид снизу на стеклянный потолок, за которым видны облака и стена здания">
+                </picture>
+              </a>
+              <div class="gallery__wrapper">
+                <p class="gallery__author">
+                  Борис
+                  <span class="gallery__time">(20 часов назад)</span>
+                </p>
+                <p class="gallery__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <p class="gallery__like">Нравится: 215</p>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="http://placehold.it/280x180">
+                <picture class="gallery__image">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source srcset="http://placehold.it/320x130 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source srcset="http://placehold.it/320x130 2x">
+                  <img src="http://placehold.it/280x180" alt="На фотографии изображен навес с надписью 'Кубанская бахча', под которым продаются товары">
+                </picture>
+              </a>
+              <div class="gallery__wrapper">
+                <p class="gallery__author">
+                  Сергей
+                  <span class="gallery__time">(25 часов назад)</span>
+                </p>
+                <p class="gallery__text">Самая кубанская в мире!</p>
+                <p class="gallery__like">Нравится: 4</p>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="http://placehold.it/280x180">
+                <picture class="gallery__image">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source srcset="http://placehold.it/320x130 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source srcset="http://placehold.it/320x130 2x">
+                  <img src="http://placehold.it/280x180" alt="На фотографии изображены ноги мужчины, который сидит и смотрит вниз на склон горы">
+                </picture>
+              </a>
+              <div class="gallery__wrapper">
+                <p class="gallery__author">
+                  Максим
+                  <span class="gallery__time">(40 часов назад)</span>
+                </p>
+                <p class="gallery__text">Где снег-то?</p>
+                <p class="gallery__like">Нравится: 150</p>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__link" href="http://placehold.it/280x180">
+                <picture class="gallery__image">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x180 2x">
+                  <source srcset="http://placehold.it/320x130 1x, http://placehold.it/280x180 2x" type="image/webp">
+                  <source srcset="http://placehold.it/320x130 2x">
+                  <img src="http://placehold.it/280x180" alt="На фотографии изображен вид из самолета на крыло во время полета">
+                </picture>
+              </a>
+              <div class="gallery__wrapper">
+                <p class="gallery__author">
+                  Надежда
+                  <span class="gallery__time">(45 часов назад)</span>
+                </p>
+                <p class="gallery__text">Всем GM и взаимные лайки!</p>
+                <p class="gallery__like">Нравится: 2560</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="photo-upload">
+        <h2 class="visually-hidden">Загрузка фотографии</h2>
+        <p class="photo-upload__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+        <div class="photo-upload__wrapper-bg">
+          <div class="photo-upload__inner container">
+            <a class="photo-upload__link" href="http://placehold.it/280x374">
+              <picture class="photo-upload__image">
+                <source media="(min-width: 960px)" srcset="http://placehold.it/280x374 1x, http://placehold.it/280x374 2x" type="image/webp">
+                <source media="(min-width: 960px)" srcset="http://placehold.it/280x374 1x, http://placehold.it/280x374 2x">
+                <source media="(min-width: 660px)" srcset="http://placehold.it/280x374 1x, http://placehold.it/280x374 2x" type="image/webp">
+                <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x374 2x">
+                <source srcset="http://placehold.it/320x374 1x, http://placehold.it/280x374 2x" type="image/webp">
+                <source srcset="http://placehold.it/320x130 2x">
+                <img src="http://placehold.it/280x374" alt="На фотографии изображен вид из самолета на крыло во время полета">
+              </picture>
+            </a>
+            <form class="photo-upload__form"  action="https://echo.htmlacademy.ru" method="post">
+              <p class="photo-upload__item photo-upload__item--cut">
+                <input class="photo-upload__input" id="cut" type="range" name="cut">
+                <label for="cut" class="photo-upload__label">
+                  <span class="visually-hidden">Обрезка фото</span>
+                </label>
+              </p>
+              <p class="photo-upload__item photo-upload__item--saturation">
+                <input class="photo-upload__input" id="saturation" type="range" name="saturation">
+                <label for="saturation" class="photo-upload__label">
+                  <span class="visually-hidden">Насыщенность цвета</span>
+                </label>
+              </p>
+              <p class="photo-upload__item photo-upload__item--brightness">
+                <input class="photo-upload__input" id="brightness" type="range" name="brightness">
+                <label for="brightness" class="photo-upload__label">
+                  <span class="visually-hidden">Яркость фото</span>
+                </label>
+              </p>
+              <div class="photo-upload__wrapper">
+                <button class="photo-upload__button" type="submit">Запостить</button>
+                <button class="photo-upload__button" type="reset">Отмена</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__inner container">
+        <a class="page-footer__logo" href="index.html">
+          <svg class="page-footer__logo-image"></svg>
+        </a>
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--twitter" href="https://twitter.com">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--facebook" href="https://facebook.com">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--instagram" href="https://instagram.com">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+        </ul>
+        <a class="page-footer__link-copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          Разработано
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

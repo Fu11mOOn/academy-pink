@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pink - форма для конкурса</title>
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="fonts/opensansregular.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* Mobile layout by default */
+        background-image: url( "preview/pink-form-mobile.jpg" );
+      }
+      /* Tablet */
+      @media ( min-width: 660px ) {
+        HTML {
+          /* Tablet layout */
+          background-image: url( "preview/pink-form-tablet.jpg" );
+        }
+      }
+      /* Desktop */
+      @media ( min-width: 960px ) {
+        HTML {
+          /* Desktop layout */
+          background-image: url( "preview/pink-form-desktop.jpg" );
+        }
+      }
+    </style>
+    <link href="preview/styles.css" rel="stylesheet">
+    <script src="preview/script.js"></script>
+    <!-- // Pixel Glass -->
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__inner container">
+        <nav class="main-navigation page-header__navigation">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="index.html">
+                <picture class="main-navigation__image">
+                  <source media="(min-width: 960px)" srcset="http://placehold.it/147x40">
+                  <source media="(min-width: 660px)" srcset="http://placehold.it/147x40">
+                  <img src="http://placehold.it/75x22" alt="Логотип приложения Pink">
+                </picture>
+                <span class="visually-hidden">Логотип приложения Pink</span>
+              </a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link">Конкурс</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+          <button class="main-navigation__toggle">
+            <span class="visually-hidden">Открыть/закрыть меню</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <header class="page-main__wrapper">
+        <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </header>
+      <section class="main-form">
+        <h2 class="visually-hidden">Форма для конкурса</h2>
+        <p class="main-form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+        <form class="main-form__list" action="https://echo.hmtlacademy.ru" method="post">
+          <div class="main-form__inner container">
+            <fieldset class="main-form__item">
+              <legend class="main-form__title">
+                <span class="visually-hidden">Инициалы</span>
+              </legend>
+              <p class="main-form__initials">
+                <input class="main-form__input" id="surname" type="text" name="surname" placeholder="Укажите фамилию *" required>
+                <label class="main-form__label" for="surname">Фамилия:</label>
+              </p>
+              <p class="main-form__initials">
+                <input class="main-form__input" id="name" type="text" name="name" placeholder="Введите ваше имя *" required>
+                <label class="main-form__label" for="name">Имя:</label>
+              </p>
+              <p class="main-form__initials">
+                <input class="main-form__input" id="patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+                <label class="main-form__label" for="patronymic">Отчество:</label>
+              </p>
+            </fieldset>
+            <fieldset class="main-form__item">
+              <legend class="main-form__title">Ваши безбашенные достижения в путешествии</legend>
+              <p class="main-form__achievements">
+                <input class="main-form__input visually-hidden" id="shark" type="checkbox" name="shark" checked>
+                <label class="main-form__label" for="shark">Сделал селфи с акулой</label>
+              </p>
+              <p class="main-form__achievements">
+                <input class="main-form__input visually-hidden" id="beach" type="checkbox" name="beach" checked>
+                <label class="main-form__label" for="beach">Обгорел на пляже</label>
+              </p>
+              <p class="main-form__achievements">
+                <input class="main-form__input visually-hidden" id="chuck-norris" type="checkbox" name="chuck-norris">
+                <label class="main-form__label" for="chuck-norris">Видел Чака Норриса</label>
+              </p>
+              <p class="main-form__achievements">
+                <input class="main-form__input visually-hidden" id="souvenirs" type="checkbox" name="souvenirs">
+                <label class="main-form__label" for="souvenirs">Накупил сувениров</label>
+              </p>
+              <p class="main-form__achievements">
+                <input class="main-form__input visually-hidden" id="tower" type="checkbox" name="tower" checked>
+                <label class="main-form__label" for="tower">Удержал башню</label>
+              </p>
+              <p class="main-form__achievements">
+                <input class="main-form__input visually-hidden" id="hotel" type="checkbox" name="hotel">
+                <label class="main-form__label" for="hotel">Разгромил отель</label>
+              </p>
+            </fieldset>
+            <fieldset class="main-form__item">
+              <legend class="main-form__title">Контактная информация</legend>
+              <p class="main-form__contacts">
+                <input class="main-form__input" id="telephone" type="tel" name="telephone" placeholder="Номер, пожалуйста">
+                <label class="main-form__label" for="telephone">Номер телефона</label>
+              </p>
+              <p class="main-form__contacts">
+                <input class="main-form__input" id="e-mail" type="email" name="e-mail" placeholder="Введите почту *" required>
+                <label class="main-form__label" for="e-mail">Адрес почты</label>
+              </p>
+            </fieldset>
+            <fieldset class="main-form__item">
+              <legend class="main-form__title">С каким приложением путешествовали?</legend>
+              <p class="main-form__travel-app">
+                <input class="main-form__input visually-hidden" id="ios" type="radio" name="travel-app" value="ios">
+                <label class="main-form__label" for="ios">Pink для iOS</label>
+              </p>
+              <p class="main-form__travel-app">
+                <input class="main-form__input visually-hidden" id="android" type="radio" name="travel-app" value="android">
+                <label class="main-form__label" for="android">Pink на Android</label>
+              </p>
+              <p class="main-form__travel-app">
+                <input class="main-form__input visually-hidden" id="wp" type="radio" name="travel-app" value="wp">
+                <label class="main-form__label" for="wp">Windows Phone</label>
+              </p>
+            </fieldset>
+            <fieldset class="main-form__item">
+              <legend class="main-form__title">Опишите свои эмоции</legend>
+              <textarea class="main-form__story" name="story" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </fieldset>
+            <div class="main-form__wrapper">
+              <button class="button main-form__button">Отправить форму</button>
+              <small class="main-form__text-bottom">
+                <span class="main-form__text-red">*</span>
+                -обязательные для заполнения поля
+              </small>
+            </div>
+            <section class="modal modal--valid">
+              <h3 class="modal__title">Ваша заявка отправлена</h3>
+              <p class="modal__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+              <div class="modal__wrapper">
+                <button class="button modal__button">Закрыть окно</button>
+              </div>
+            </section>
+            <section class="modal modal--invalid">
+              <h3 class="modal__title">Что-то пошло не так!</h3>
+              <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+              <button class="button modal__button">Ок</button>
+            </section>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__inner container">
+        <a class="page-footer__logo" href="index.html">
+          <svg class="page-footer__logo-image"></svg>
+        </a>
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--twitter" href="https://twitter.com">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--facebook" href="https://facebook.com">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--instagram" href="https://instagram.com">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+        </ul>
+        <a class="page-footer__link-copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          Разработано
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

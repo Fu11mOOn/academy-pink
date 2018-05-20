@@ -42,7 +42,7 @@
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
               <a class="main-navigation__link">
-                <picture>
+                <picture class="main-navigation__image">
                   <source media="(min-width: 960px)" srcset="http://placehold.it/147x40">
                   <source media="(min-width: 660px)" srcset="http://placehold.it/147x40">
                   <img src="http://placehold.it/75x22" alt="Логотип приложения Pink">
@@ -57,7 +57,7 @@
               <a class="main-navigation__link" href="photo.html">Фотографии</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="competiton.html">Конкурс</a>
+              <a class="main-navigation__link" href="form.html">Конкурс</a>
             </li>
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
@@ -118,7 +118,7 @@
       </section>
       <section class="effect">
         <div class="effect__inner container">
-          <h2 class="effect__title">Эффект на 24 часа!</h3>
+          <h2 class="effect__title">Эффект на 24 часа!</h2>
           <p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
           <a class="effect__link" href="study.html">Узнать больше об исследовании</a>
         </div>
@@ -159,24 +159,25 @@
       <section class="price">
         <div class="price__inner container">
           <h2 class="visually-hidden">Стоимость тарифов</h2>
-          <input class="price__input-1" id="price-1" type="text">
+          <input class="price__input-1 visually-hidden" id="price-1" type="text">
           <label class="price__label" for="price-1">
             <span class="visually-hidden">Базовый тариф</span>
           </label>
-          <input class="price__input-2" id="price-2" type="text">
+          <input class="price__input-2 visually-hidden" id="price-2" type="text">
           <label class="price__label" for="price-2">
             <span class="visually-hidden">Стандартный тариф</span>
           </label>
-          <input class="price__input-3" id="price-3" type="text">
+          <input class="price__input-3 visually-hidden" id="price-3" type="text">
           <label class="price__label" for="price-3">
             <span class="visually-hidden">Безлимитный тариф</span>
           </label>
           <table class="price__table">
-            <th class="price__row price__row--title">
+            <tr class="price__row price__row--title">
+              <td class="price__cell"></td>
               <td class="price__cell">База 1,99 USD</td>
               <td class="price__cell price__cell--current">Стандарт 3,99 USD</td>
               <td class="price__cell">Анлим 9,99 USD</td>
-            </th>
+            </tr>
             <tr class="price__row">
               <td class="price__cell">Розовый фильтр</td>
               <td class="price__cell">
