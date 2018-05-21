@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,24 +32,23 @@
       }
     </style>
     <link href="preview/styles.css" rel="stylesheet">
-    <script src="preview/script.js"></script>
     <!-- // Pixel Glass -->
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__inner container">
         <nav class="main-navigation page-header__navigation">
+          <div class="main-navigation__wrapper">
+            <a class="main-navigation__logo">
+              <picture class="main-navigation__image">
+                <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                <img src="img/logo-pink-white-mobile.svg" alt="Логотип приложения Pink">
+              </picture>
+              <span class="visually-hidden">Логотип приложения Pink</span>
+            </a>
+          </div>
           <ul class="main-navigation__list">
-            <li class="main-navigation__item">
-              <a class="main-navigation__link">
-                <picture class="main-navigation__image">
-                  <source media="(min-width: 960px)" srcset="http://placehold.it/147x40">
-                  <source media="(min-width: 660px)" srcset="http://placehold.it/147x40">
-                  <img src="http://placehold.it/75x22" alt="Логотип приложения Pink">
-                </picture>
-                <span class="visually-hidden">Логотип приложения Pink</span>
-              </a>
-            </li>
             <li class="main-navigation__item">
               <a class="main-navigation__link">Главная</a>
             </li>
@@ -63,7 +62,7 @@
               <a class="main-navigation__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
-          <button class="main-navigation__toggle">
+          <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть/закрыть меню</span>
           </button>
         </nav>
@@ -72,48 +71,63 @@
     <main class="page-main">
       <section class="download-app">
         <div class="download-app__inner container">
-          <h1 class="download-app__title">Взгляните на жизнь иначе!</h1>
-          <a class="download-app__link-button" href="https://www.apple.com/ru/itunes/charts/free-apps/">Скачать приложение</a>
-          <ul class="download-app__list">
-            <li class="download-app__item">
-              <a class="download-app__link" href="https://www.apple.com/ru/itunes/charts/free-apps/">
-                <span class="visually-hidden">Скачать из iTunes Store</span>
-              </a>
-            </li>
-            <li class="download-app__item">
-              <a class="download-app__link" href="https://play.google.com/store">
-                <span class="visually-hidden">Скачать из Google Play</span>
-              </a>
-            </li>
-            <li class="download-app__item">
-              <a class="download-app__link" href="https://www.microsoft.com/ru-ru/store/appsvnext/windows">
-                <span class="visually-hidden">Скачать из Windows Store</span>
-              </a>
-            </li>
-          </ul>
-          <small class="download-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</small>
+          <div class="download-app__wrapper-image">
+            <picture class="download-app__image">
+              <source media="(min-width: 960px)" srcset="../img/iphone-hand-desktop@1x.webp 1x, ../img/iphone-hand-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 960px)" srcset="../img/iphone-hand-desktop@1x.png 1x, ../img/iphone-hand-desktop@2x.png 2x">
+              <source media="(min-width: 660px)" srcset="../img/iphone-hand-tablet@1x.webp 1x, ../img/iphone-hand-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 660px)" srcset="../img/iphone-hand-tablet@1x.png 1x, ../img/iphone-hand-tablet@2x.png 2x">
+              <source srcset="../img/iphone-hand-mobile@1x.webp 1x, ../img/iphone-hand-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="../img/iphone-hand-mobile@2x.png 2x">
+              <img src="../img/iphone-hand-mobile@1x.png" alt="Рука, держащая смартфон с ярким экраном розового цвета">
+            </picture>
+          </div>
+          <div class="download-app__wrapper">
+            <h1 class="download-app__title">Взгляните на жизнь иначе!</h1>
+            <a class="download-app__button" href="https://www.apple.com/ru/itunes/charts/free-apps/">Скачать приложение</a>
+            <ul class="download-app__list">
+              <li class="download-app__item">
+                <a class="download-app__link download-app__link--apple" href="https://www.apple.com/ru/itunes/charts/free-apps/">
+                  <span class="visually-hidden">Скачать из iTunes Store</span>
+                </a>
+              </li>
+              <li class="download-app__item">
+                <a class="download-app__link download-app__link--android" href="https://play.google.com/store">
+                  <span class="visually-hidden">Скачать из Google Play</span>
+                </a>
+              </li>
+              <li class="download-app__item">
+                <a class="download-app__link download-app__link--wp" href="https://www.microsoft.com/ru-ru/store/appsvnext/windows">
+                  <span class="visually-hidden">Скачать из Windows Store</span>
+                </a>
+              </li>
+            </ul>
+            <small class="download-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</small>
+          </div>
         </div>
       </section>
       <section class="advantages">
-        <div class="advantages__inner container">
-          <h2 class="advantages__title">
-            Устали от серости мегаполиса?
-            <span class="advantages__wrapper">Нам есть, что вам предложить!</span>
-          </h2>
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <h3 class="advantages__list-title">Поднимает настроение</h3>
-              <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__list-title">Меняет мир вокруг</h3>
-              <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__list-title">Заводит новых друзей</h3>
-              <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
+        <h2 class="advantages__title">
+          Устали от серости мегаполиса?
+          <span class="advantages__wrapper">Нам есть, что вам предложить!</span>
+        </h2>
+        <div class="advantages__wrapper-bg">
+          <div class="advantages__inner container">
+            <ul class="advantages__list">
+              <li class="advantages__item">
+                <h3 class="advantages__list-title">Поднимает настроение</h3>
+                <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="advantages__item">
+                <h3 class="advantages__list-title">Меняет мир вокруг</h3>
+                <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="advantages__item">
+                <h3 class="advantages__list-title">Заводит новых друзей</h3>
+                <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="effect">
@@ -171,7 +185,7 @@
           <label class="price__label" for="price-3">
             <span class="visually-hidden">Безлимитный тариф</span>
           </label>
-          <table class="price__table">
+          <table style="display: none" class="price__table">
             <tr class="price__row price__row--title">
               <td class="price__cell"></td>
               <td class="price__cell">База 1,99 USD</td>
@@ -271,5 +285,9 @@
         </a>
       </div>
     </footer>
+    <script>document.documentElement.classList.remove("no-js");</script>
+    <script src="js/check-webp.js"></script>
+    <script src="js/open-navigation.js"></script>
+    <script src="preview/script.js"></script>
   </body>
 </html>

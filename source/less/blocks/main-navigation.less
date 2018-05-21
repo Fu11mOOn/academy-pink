@@ -1,0 +1,215 @@
+.main-navigation__wrapper,
+.main-navigation__list {
+  background-color: #283645;
+}
+
+.main-navigation__wrapper,
+.main-navigation__item {
+  border-bottom: 1px solid #000000;
+}
+
+.main-navigation {
+  position: relative;
+}
+
+.main-navigation__wrapper {
+  display: flex;
+  align-items: flex-start;
+  padding: 22px 20px 0;
+  height: 70px;
+
+  &--js-hide {
+    background-color: transparent;
+    border: none;
+    height: 66px;
+  }
+}
+
+.main-navigation__logo {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 74px;
+    height: 23px;
+  }
+
+  &[href]:hover {
+    &::before {
+      .paste-image(center; url("../img/logo-pink-white-mobile-hover.svg"); 74px 23px;);
+    }
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+
+    &::before {
+      background-image: none;
+    }
+  }
+}
+
+.main-navigation__list {
+  .set-clean-list();
+
+  &--js-hide {
+    display: none;
+  }
+
+  &--js-opened {
+    display: block;
+  }
+}
+
+.main-navigation__item,
+.main-navigation__link {
+  display: flex;
+}
+
+.main-navigation__item {
+  border-top: 1px solid #485461;
+}
+
+.main-navigation__link {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 62px;
+  .set-font(700; 18px; 32px; #ffffff);
+  text-transform: uppercase;
+
+  &[href]:hover {
+    color: #D22856;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+}
+
+.main-navigation__toggle {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  // display: none;
+  padding: 0;
+  width: 50px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  .paste-image(0px 0px;);
+  cursor: pointer;
+
+  &:hover {
+    .paste-image(0px -26px;);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--js-vidible {
+    display: flex;
+  }
+
+  &--js-closed {
+    top: 21px;
+    right: 19px;
+    width: 24px;
+    height: 24px;
+    .paste-image(-51px 0px;);
+
+    &:hover {
+      .paste-image(-51px -25px;);
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: 660px) {
+  .main-navigation__wrapper {
+    padding-top: 27px;
+    height: 110px;
+
+    &--js-hide {
+      height: 111px;
+    }
+  }
+
+  .main-navigation__logo {
+    &::before {
+      top: 0;
+      left: 0;
+      width: 146px;
+      height: 40px;
+    }
+
+    &[href]:hover {
+      &::before {
+        background-image: url("../img/logo-pink-white-tablet-hover.svg");
+        background-size: 146px 40px;
+      }
+    }
+  }
+
+  .main-navigation__toggle {
+    top: 45px;
+  }
+}
+
+@media (min-width: 960px) {
+  .main-navigation,
+  .main-navigation__list {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .main-navigation {
+    padding-top: 27px;
+    min-height: 110px;
+  }
+
+  .main-navigation__wrapper,
+  .main-navigation__list,
+  .main-navigation__item {
+    background-color: transparent;
+    border: none;
+  }
+
+  .main-navigation__wrapper {
+    padding: 0;
+    margin-right: 92px;
+    height: auto;
+  }
+
+  .main-navigation__logo {
+    &[href]:hover {
+      &::before {
+        background-image: url("../img/logo-pink-white-desktop-hover.svg");
+      }
+    }
+  }
+
+  .main-navigation__list {
+    flex-wrap: wrap;
+    margin-right: -2px;
+  }
+
+  .main-navigation__link {
+    margin-top: 18px;
+    margin-left: 80px;
+    min-height: auto;
+    .set-font(400; 18px; 18px; #ffffff);
+    text-transform: none;
+  }
+
+  .main-navigation__toggle {
+    display: none;
+  }
+}

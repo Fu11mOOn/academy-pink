@@ -43,12 +43,16 @@ gulp.task("serve", function() {
   gulp.watch("source/less/**/*.less", ["style"]);
   gulp.watch("source/*.html", ["html"]).on("change", server.reload);
   gulp.watch("source/js/*.js", ["jsmin"]).on("change", server.reload);
-  gulp.watch("source/img/*.svg", ["images"]).on("change", server.reload);
+  gulp.watch("source/img/copy/*.svg", ["images"]).on("change", server.reload);
   gulp.watch("source/img/*.{png,jpg}", ["images", "webp"]).on("change", server.reload);
+  gulp.watch("source/img/sprite/*.svg", ["svgstore"]).on("change", server.reload);
 });
 
 gulp.task("images", function() {
-  return gulp.src("source/img/*.{png,jpg,svg}")
+  return gulp.src([
+    "source/img/*.{png,jpg}",
+    "source/img/copy/*.svg"
+  ])
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
