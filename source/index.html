@@ -141,103 +141,116 @@
         <div class="reviews__inner container">
           <h2 class="visually-hidden">Отзывы пользователей</h2>
           <div class="reviews__list">
+            <input class="reviews__input" id="slider-1" type="radio" name="slider" checked>
+            <input class="reviews__input" id="slider-2" type="radio" name="slider">
+            <input class="reviews__input" id="slider-3" type="radio" name="slider">
             <blockquote class="reviews__item">
-              <p class="reviews__text">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
               <cite class="reviews__author">
                 Николай Петров
-                <span class="reviews__wrapper">25лет, водитель трамвая</span>
+                <span class="reviews__wrapper">25 лет, водитель трамвая</span>
               </cite>
+              <p class="reviews__text">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
             </blockquote>
-          </div>
-          <div class="reviews__slider">
-            <button class="reviews__slider-button reviews__slider-button--current">
-              <span class="visually-hidden">1ый отзыв</span>
-            </button>
-            <button class="reviews__slider-button">
-              <span class="visually-hidden">2ой отзыв</span>
-            </button>
-            <button class="reviews__slider-button">
-              <span class="visually-hidden">3ий отзыв</span>
-            </button>
-          </div>
-          <div class="reviews__pagination">
-            <button class="reviews__pagination-button reviews__pagination-button--back">
-              <span class="visually-hidden">Предыдущий отзыв</span>
-            </button>
-            <button class="reviews__pagination-button reviews__pagination-button--next">
-              <span class="visually-hidden">Следующий отзыв</span>
-            </button>
+            <div class="reviews__controls">
+              <label class="reviews__label" for="slider-1"></label>
+              <label class="reviews__label" for="slider-2"></label>
+              <label class="reviews__label" for="slider-3"></label>
+            </div>
+            <div class="reviews__pagination">
+              <button class="reviews__button reviews__button--back">
+                <span class="visually-hidden">Предыдущий отзыв</span>
+              </button>
+              <button class="reviews__button reviews__button--next">
+                <span class="visually-hidden">Следующий отзыв</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
       <section class="price">
-        <div class="price__inner container">
-          <h2 class="visually-hidden">Стоимость тарифов</h2>
-          <input class="price__input-1 visually-hidden" id="price-1" type="text">
-          <label class="price__label" for="price-1">
-            <span class="visually-hidden">Базовый тариф</span>
-          </label>
-          <input class="price__input-2 visually-hidden" id="price-2" type="text">
-          <label class="price__label" for="price-2">
-            <span class="visually-hidden">Стандартный тариф</span>
-          </label>
-          <input class="price__input-3 visually-hidden" id="price-3" type="text">
-          <label class="price__label" for="price-3">
-            <span class="visually-hidden">Безлимитный тариф</span>
-          </label>
-          <table style="display: none" class="price__table">
-            <tr class="price__row price__row--title">
-              <td class="price__cell"></td>
-              <td class="price__cell">База 1,99 USD</td>
-              <td class="price__cell price__cell--current">Стандарт 3,99 USD</td>
-              <td class="price__cell">Анлим 9,99 USD</td>
-            </tr>
-            <tr class="price__row">
-              <td class="price__cell">Розовый фильтр</td>
-              <td class="price__cell">
-                Розовый фильтр
-                <span class="visually-hidden">Присутствует</span>
-              </td>
-              <td class="price__cell">
-                Розовый фильтр
-                <span class="visually-hidden">Присутствует</span>
-              </td>
-              <td class="price__cell">
-                Розовый фильтр
-                <span class="visually-hidden">Присутствует</span>
-              </td>
-            </tr>
-            <tr class="price__row">
-              <td class="price__cell">Смайлики</td>
-              <td class="price__cell">
-                Смайлики
-                <span class="visually-hidden">Отсутсвтует</span>
-              </td>
-              <td class="price__cell">
-                Смайлики
-                <span class="visually-hidden">Присутствует</span>
-              </td>
-              <td class="price__cell">
-                Смайлики
-                <span class="visually-hidden">Присутствует</span>
-              </td>
-            </tr>
-            <tr class="price__row">
-              <td class="price__cell">Комментарии</td>
-              <td class="price__cell">
-                Комментарии
-                <span class="visually-hidden">Отсутсвтует</span>
-              </td>
-              <td class="price__cell">
-                Комментарии
-                <span class="visually-hidden">Отсутсвтует</span>
-              </td>
-              <td class="price__cell">
-                Комментарии
-                <span class="visually-hidden">Присутствует</span>
-              </td>
-            </tr>
-          </table>
+        <div class="price__wrapper-bg">
+          <div class="price__inner container">
+            <h2 class="visually-hidden">Стоимость тарифов</h2>
+            <input class="price__input" id="price-1" type="radio" name="price">
+            <input class="price__input" id="price-2" type="radio" name="price" checked>
+            <input class="price__input" id="price-3" type="radio" name="price">
+            <table class="price__table">
+              <tr class="price__row price__row--title">
+                <td class="price__cell"></td>
+                <td class="price__cell">
+                  База
+                  <br>
+                  <span class="price__wrapper">1,99 USD</span>
+                </td>
+                <td class="price__cell price__cell--current">
+                  Стандарт
+                  <br>
+                  <span class="price__wrapper">3,99 USD</span>
+                </td>
+                <td class="price__cell">
+                  Анлим
+                  <br>
+                  <span class="price__wrapper">9,99 USD</span>
+                </td>
+              </tr>
+              <tr class="price__row">
+                <td class="price__cell">Розовый фильтр</td>
+                <td class="price__cell price__cell--yes">
+                  Розовый фильтр
+                  <span class="visually-hidden">Присутствует</span>
+                </td>
+                <td class="price__cell price__cell--yes">
+                  Розовый фильтр
+                  <span class="visually-hidden">Присутствует</span>
+                </td>
+                <td class="price__cell price__cell--yes">
+                  Розовый фильтр
+                  <span class="visually-hidden">Присутствует</span>
+                </td>
+              </tr>
+              <tr class="price__row">
+                <td class="price__cell">Смайлики</td>
+                <td class="price__cell price__cell--no">
+                  Смайлики
+                  <span class="visually-hidden">Отсутсвтует</span>
+                </td>
+                <td class="price__cell price__cell--yes">
+                  Смайлики
+                  <span class="visually-hidden">Присутствует</span>
+                </td>
+                <td class="price__cell price__cell--yes">
+                  Смайлики
+                  <span class="visually-hidden">Присутствует</span>
+                </td>
+              </tr>
+              <tr class="price__row">
+                <td class="price__cell">Комментарии</td>
+                <td class="price__cell price__cell--no">
+                  Комментарии
+                  <span class="visually-hidden">Отсутсвтует</span>
+                </td>
+                <td class="price__cell price__cell--no">
+                  Комментарии
+                  <span class="visually-hidden">Отсутсвтует</span>
+                </td>
+                <td class="price__cell price__cell--yes">
+                  Комментарии
+                  <span class="visually-hidden">Присутствует</span>
+                </td>
+              </tr>
+            </table>
+            <div class="price__controls">
+              <label class="price__label" for="price-1">
+                <span class="visually-hidden">Базовый тариф</span>
+              </label>
+              <label class="price__label" for="price-2">
+                <span class="visually-hidden">Стандартный тариф</span>
+              </label>
+              <label class="price__label" for="price-3">
+                <span class="visually-hidden">Безлимитный тариф</span>
+              </label>
+            </div>
+          </div>
         </div>
       </section>
       <section class="contacts">
@@ -285,8 +298,7 @@
         </a>
       </div>
     </footer>
-    <script>document.documentElement.classList.remove("no-js");</script>
-    <script src="js/check-webp.js"></script>
+    <!-- <script src="js/check-webp.js"></script> -->
     <script src="js/open-navigation.js"></script>
     <script src="preview/script.js"></script>
   </body>
