@@ -71,7 +71,7 @@
     </header>
     <main class="page-main">
       <header class="page-main__wrapper">
-        <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <h1 class="page-main__title page-main__title--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </header>
       <section class="main-form">
         <h2 class="visually-hidden">Форма для конкурса</h2>
@@ -178,7 +178,10 @@
     <footer class="page-footer">
       <div class="page-footer__inner container">
         <a class="page-footer__logo" href="index.html">
-          <svg class="page-footer__logo-image"></svg>
+          <picture class="page-footer__image">
+            <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+            <img src="img/logo-pink-blue-mobile.svg" alt="Логотип приложения Pink">
+          </picture>
         </a>
         <ul class="page-footer__list">
           <li class="page-footer__item">
@@ -192,17 +195,22 @@
             </a>
           </li>
           <li class="page-footer__item">
-            <a class="page-footer__link page-footer__link--instagram" href="https://instagram.com">
-              <span class="visually-hidden">Instagram</span>
+            <a class="page-footer__link page-footer__link--youtube" href="https://youtube.com">
+              <span class="visually-hidden">YouTube</span>
             </a>
           </li>
         </ul>
         <a class="page-footer__link-copyright" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано
           <span class="visually-hidden">HTML Academy</span>
+          <svg class="page-footer__image-copyright" width="27px" height="34px">
+            <use xlink:href="img/sprite-lib.svg#logo-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>
+    <script src="js/check-webp.js"></script>
     <script src="js/open-navigation.js"></script>
+    <script src="preview/script.js"></script>
   </body>
 </html>
