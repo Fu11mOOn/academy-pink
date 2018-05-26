@@ -16,12 +16,6 @@
   margin-bottom: 40px;
   width: 146px;
   height: 40px;
-  cursor: pointer;
-
-  img {
-    width: 146px;
-    height: 40px;
-  }
 
   &::before {
     content: "";
@@ -30,6 +24,13 @@
     left: 0;
     width: 146px;
     height: 40px;
+  }
+
+  &[href] {
+    &:hover,
+    &:active {
+      cursor: pointer;
+    }
   }
 
   &[href]:hover {
@@ -89,7 +90,7 @@
   &--twitter {
     &::before {
       top: 15px;
-      left: 14px;
+      left: 13px;
       width: 18px;
       height: 15px;
       .paste-image(-476px 0px;);
@@ -98,7 +99,7 @@
 
   &--facebook {
     &::before {
-      top: 13px;
+      top: 11px;
       left: 17px;
       width: 9px;
       height: 19px;
@@ -119,7 +120,7 @@
 
 .page-footer__link-copyright {
   position: relative;
-  padding-top: 5px;
+  padding-top: 6px;
   padding-right: 40px;
   min-height: 34px;
   .set-font(400; 14px; 18px; #283645);
@@ -150,6 +151,8 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
+    padding: 36px 0;
+
     &--index {
       display: block;
     }
@@ -157,5 +160,48 @@
 
   .page-footer__inner {
     flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo,
+  .page-footer__list {
+    margin: 0;
+  }
+
+  .page-footer__list {
+    margin-top: 4px;
+    margin-right: 16px;
+  }
+
+  .page-footer__link-copyright {
+    margin-top: 14px;
+    padding-right: 42px;
+  }
+}
+
+@media (min-width: @desktop-width)  {
+  .page-footer {
+    padding: 70px 0;
+  }
+
+  .page-footer__logo {
+    &[href]:hover {
+      &::before {
+        background-image: url("../img/logo-pink-blue-desktop-hover.svg")
+      }
+    }
+  }
+
+  .page-footer__list {
+    margin-right: -8px;
+
+    &--photo {
+      margin-right: -15px;
+    }
+  }
+
+  .page-footer__link-copyright {
+    font-size: 18px;
   }
 }

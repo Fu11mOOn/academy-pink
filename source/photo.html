@@ -80,7 +80,7 @@
           <div class="gallery__wrapper">
             <h3 class="gallery__title">Панорама дня</h3>
             <a class="gallery__link gallery__link--best" href="img/panorama-desktop@2x.jpg">
-              <picture class="best-photo__image">
+              <picture class="gallery__image">
                 <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x" type="image/webp">
@@ -238,39 +238,53 @@
         <p class="photo-upload__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
         <div class="photo-upload__wrapper-bg">
           <div class="photo-upload__inner container">
-            <a class="photo-upload__link" href="http://placehold.it/280x374">
+            <a class="photo-upload__link" href="img/photo-7-desktop@2x.jpg">
               <picture class="photo-upload__image">
-                <source media="(min-width: 960px)" srcset="http://placehold.it/280x374 1x, http://placehold.it/280x374 2x" type="image/webp">
-                <source media="(min-width: 960px)" srcset="http://placehold.it/280x374 1x, http://placehold.it/280x374 2x">
-                <source media="(min-width: 660px)" srcset="http://placehold.it/280x374 1x, http://placehold.it/280x374 2x" type="image/webp">
-                <source media="(min-width: 660px)" srcset="http://placehold.it/280x180 1x, http://placehold.it/280x374 2x">
-                <source srcset="http://placehold.it/320x374 1x, http://placehold.it/280x374 2x" type="image/webp">
-                <source srcset="http://placehold.it/320x130 2x">
-                <img src="http://placehold.it/280x374" alt="На фотографии изображен вид из самолета на крыло во время полета">
+                <source media="(min-width: 960px)" srcset="img/photo-7-desktop@1x.webp 1x, img/photo-7-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 960px)" srcset="img/photo-7-desktop@1x.jpg 1x, img/photo-7-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-7-tablet@1x.webp 1x, img/photo-7-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 660px)" srcset="img/photo-7-tablet@1x.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
+                <source srcset="img/photo-7-mobile@1x.webp 1x, img/photo-7-mobile@2x.webp 2x" type="image/webp">
+                <source srcset="img/photo-7-mobile@2x.jpg 2x">
+                <img src="img/photo-7-mobile@1x.jpg" alt="На фотографии изображен вид из самолета на крыло во время полета">
               </picture>
             </a>
             <form class="photo-upload__form"  action="https://echo.htmlacademy.ru" method="post">
-              <p class="photo-upload__item photo-upload__item--cut">
-                <input class="photo-upload__input" id="cut" type="range" name="cut">
-                <label for="cut" class="photo-upload__label">
-                  <span class="visually-hidden">Обрезка фото</span>
-                </label>
-              </p>
-              <p class="photo-upload__item photo-upload__item--saturation">
-                <input class="photo-upload__input" id="saturation" type="range" name="saturation">
-                <label for="saturation" class="photo-upload__label">
-                  <span class="visually-hidden">Насыщенность цвета</span>
-                </label>
-              </p>
-              <p class="photo-upload__item photo-upload__item--brightness">
-                <input class="photo-upload__input" id="brightness" type="range" name="brightness">
-                <label for="brightness" class="photo-upload__label">
-                  <span class="visually-hidden">Яркость фото</span>
-                </label>
-              </p>
+              <ul class="photo-upload__list">
+                <li class="photo-upload__item">
+                  <input type="radio" id="editor-1" name="editor-slider" checked>
+                  <label class="photo-upload__label photo-upload__label--cut" for="editor-1">
+                    <span class="visually-hidden">Обрезка фото</span>
+                    <svg class="photo-upload__image" width="48px" height="48px">
+                      <use xlink:href="img/sprite-lib.svg#icon-editor-crop"></use>
+                    </svg>
+                  </label>
+                  <input class="photo-upload__input" id="cut" type="range" name="cut" value="80">
+                </li>
+                <li class="photo-upload__item photo-upload__item--saturation">
+                  <input type="radio" id="editor-2" name="editor-slider">
+                  <label class="photo-upload__label photo-upload__label--saturation" for="editor-2">
+                    <span class="visually-hidden">Насыщенность цвета</span>
+                    <svg class="photo-upload__image" width="48px" height="48px">
+                      <use xlink:href="img/sprite-lib.svg#icon-editor-fill"></use>
+                    </svg>
+                  </label>
+                  <input class="photo-upload__input" id="saturation" type="range" name="saturation" value="15">
+                </li>
+                <li class="photo-upload__item photo-upload__item--brightness">
+                  <input type="radio" id="editor-3" name="editor-slider">
+                  <label class="photo-upload__label photo-upload__label--brightness" for="editor-3">
+                    <span class="visually-hidden">Яркость фото</span>
+                    <svg class="photo-upload__image" width="32px" height="32px">
+                      <use xlink:href="img/sprite-lib.svg#icon-editor-contrast"></use>
+                    </svg>
+                  </label>
+                  <input class="photo-upload__input" id="brightness" type="range" name="brightness" value="50">
+                </li>
+              </ul>
               <div class="photo-upload__wrapper">
-                <button class="photo-upload__button" type="submit">Запостить</button>
-                <button class="photo-upload__button" type="reset">Отмена</button>
+                <button class="photo-upload__button photo-upload__button--send" type="submit">Запостить</button>
+                <button class="photo-upload__button photo-upload__button--cancel" type="reset">Отмена</button>
               </div>
             </form>
           </div>
@@ -285,7 +299,7 @@
             <img src="img/logo-pink-blue-mobile.svg" alt="Логотип приложения Pink">
           </picture>
         </a>
-        <ul class="page-footer__list">
+        <ul class="page-footer__list page-footer__list--photo">
           <li class="page-footer__item">
             <a class="page-footer__link page-footer__link--twitter" href="https://twitter.com">
               <span class="visually-hidden">Twitter</span>
