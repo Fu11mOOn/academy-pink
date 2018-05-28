@@ -1,5 +1,6 @@
 .page-footer {
   padding: 40px 0;
+
   &--index {
     display: none;
   }
@@ -82,7 +83,7 @@
   &:active {
     border-color: fade(#283645, 10%);
 
-    &:before {
+    &::before {
       opacity: 0.3;
     }
   }
@@ -180,7 +181,7 @@
   }
 }
 
-@media (min-width: @desktop-width)  {
+@media (min-width: @desktop-width) {
   .page-footer {
     padding: 70px 0;
   }
@@ -188,7 +189,7 @@
   .page-footer__logo {
     &[href]:hover {
       &::before {
-        background-image: url("../img/logo-pink-blue-desktop-hover.svg")
+        background-image: url("../img/logo-pink-blue-desktop-hover.svg");
       }
     }
   }

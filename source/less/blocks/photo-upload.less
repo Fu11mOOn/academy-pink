@@ -14,6 +14,7 @@
 .photo-upload__inner {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .photo-upload__link {
@@ -98,7 +99,7 @@
 
 .photo-upload__input {
   flex-grow: 1;
-  -webkit-appearance: none;
+  appearance: none;
   display: none;
   margin: 6px 0;
   margin-left: -4px;
@@ -106,19 +107,36 @@
   background-color: #283645;
   cursor: pointer;
 
-  &:active {
-    &::-webkit-slider-thumb {
-      background-color: #d22856;
-    }
+  &::-moz-range-track {
+    height: 2px;
+    background-color: #283645;
   }
 
   &::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    appearance: none;
     width: 14px;
     height: 14px;
     background-color: #f2f2f2;
     border: 2px solid #d22856;
     border-radius: 50%;
+  }
+
+  &::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background-color: #f2f2f2;
+    border: 2px solid #d22856;
+    border-radius: 50%;
+  }
+
+  &:active {
+    &::-webkit-slider-thumb {
+      background-color: #d22856;
+    }
+
+    &::-moz-range-thumb {
+      background-color: #d22856;
+    }
   }
 }
 
