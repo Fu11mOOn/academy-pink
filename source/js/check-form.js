@@ -1,13 +1,26 @@
-var elems = form.elements;
-var formButton = document.querySelector(".main-form__button");
-var modalValid = document.querySelector(".modal--valid");
-var modalInvalid = document.querySelector(".modal--invalid");
-var modalButton = document.querySelector(".modal__button");
+'use strict';
 
-formButton.addEventListener("click", function() {
-  if (elems.checkValidity()) {
-    modalValid.classList.add("modal--js-open");
-  } else {
-    modalInvalid.classList.add("modal--js-open");
-  }
-});
+(function () {
+  var OPENED_CLASS = 'modal--js-open';
+
+  var form = document.querySelector('.main-form__form');
+  var submitButton = form.querySelector('.main-form__button');
+  var validModal = form.querySelector('.modal--valid');
+  var invalidModal = form.querySelector('.modal--invalid');
+  var modalButtons = form.querySelectorAll('.modal__button');
+
+  submitButton.addEventListener('click', function (evt) {
+    if (form.checkValidity()) {
+      evt.preventDefault();
+      form.reset();
+      validModal.classList.add(OPENED_CLASS);
+    } else {
+      invalidModal.classList.add(OPENED_CLASS);
+    }
+  });
+  modalButtons.forEach(function (item) {
+    item.addEventListener('click', function () {
+      form.querySelector('.modal--js-open').classList.remove(OPENED_CLASS);
+    });
+  });
+})();

@@ -94,10 +94,7 @@ gulp.task("clean", function() {
 })
 
 gulp.task("copy", function() {
-  return gulp.src([
-      "source/fonts/**/*.{woff,woff2}",
-      "source/preview/*.{jpg,css,js}"
-    ], {
+  return gulp.src("source/fonts/**/*.{woff,woff2}", {
       base: "source"
     })
     .pipe(gulp.dest("build"));
